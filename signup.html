@@ -9,6 +9,7 @@
 
 <body>
     <div class="signup-container">
+            <div id="error-message" style="display: none; color: red;"></div>
         <h2>
             Register
         </h2>
@@ -25,8 +26,11 @@
                 <input type="radio" id="Customer" name="signupType" value="Customer" checked>
                 <label for="Customer">Customer</label>
             </div>
-            <button  type="button" id="signupButton">Signup</button>
-            <button id="loginButton">You already have an account?</button>
+            <div>
+                <button  type="button" id="signupButton">Signup</button>
+            </div>
+            <div><a href="login.html" class="button">You already have an account?</a></div>
+
         </form>
     </div>
 

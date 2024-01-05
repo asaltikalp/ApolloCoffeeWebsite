@@ -19,16 +19,15 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app); // 'auth' nesnesi tanımlandı
 
-document.getElementById('loginButton').addEventListener('click', function(event) {
-    event.preventDefault(); // Fonksiyona 'event' parametresi eklendi
-
+document.getElementById('loginButton').addEventListener('click', function() {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            console.log("Logged in:", userCredential.user);
-
+            // Giriş başarılı
+            console.log("Login successful:", userCredential);
+            // Burada giriş sonrası işlemleri yapabilirsiniz, örneğin anasayfaya yönlendirme
             var loginType = document.querySelector('input[name="loginType"]:checked').value;
 
             if (loginType === 'Staff') {
@@ -39,9 +38,11 @@ document.getElementById('loginButton').addEventListener('click', function(event)
         })
         .catch((error) => {
             console.error("Login error:", error);
-        });
+            // Kullanıcıya hata mesajını göster
+            const errorMessageDiv = document.getElementById('loginErrorMessage');
+            errorMessageDiv.innerText = "Login failed: \n" + error.message;
+            errorMessageDiv.style.display = 'block'; // Hata mesajını görünür yap
+         });
+
 });
 
-document.getElementById('signupButton').addEventListener('click', function() {
-    window.location.href = 'signup.html'; // signup sayfasına yönlendirme
-});

@@ -9,6 +9,7 @@
 
 <body>
     <div class="login-container">
+        <div id="loginErrorMessage" style="color: red; display: none;"></div>
         <h2>Login</h2>
         <form id="loginForm" method="post">
             <div class="input-group">
@@ -27,8 +28,8 @@
             <button  type="button" id="loginButton">Login</button>
             </div>
             <div>
-            <button  type="button" id="signupButton">You don't have an account?</button></div>
-        </form>
+                <a href="signup.html" class="button">You don't have an account?</a>
+            </form>
     </div>
         <script type="module" src="login.js"></script>
 </body>
