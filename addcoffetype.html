@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apollo Administration</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 300px; margin: auto; }
+        label, input, button { display: block; width: 100%; margin-bottom: 10px; }
+        button { cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Add New Coffee</h2>
+        <form id="addCoffeeForm">
+            <label for="coffeeName">Coffee Name:</label>
+            <input type="text" id="coffeeName" required>
+
+            <label for="coffeeDescription">Description:</label>
+            <textarea id="coffeeDescription" required></textarea>
+
+            <label for="coffeeSize">Size:</label>
+            <select id="coffeeSize" required>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+
+            <label for="coffeePrice">Price:</label>
+            <input type="number" id="coffeePrice" required>
+
+            <button type="submit">Add Coffee</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript to handle form submission will go here
+    </script>
+</body>
+</html>

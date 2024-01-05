@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    background-image: url('src/background.png'); /* Resmin yolu */
+    background-size: cover; /* Resmi kaplayacak şekilde ayarlar */
+    background-position: center; /* Resmi ortalar */
+    background-repeat: repeat; /* Resmin tekrar etmesini önler */
+
+}
+
+.coffee-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.coffee-item {
+    background-color: hsl(44, 100%, 93%);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: calc(28%);
+    margin-bottom: 20px; 
+}
+
+.coffee-item img {
+    width: 30%;
+    height: auto;
+    border-radius: 40px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.quantity-control button {
+    background-color: hsla(21, 100%, 50%, 0.31);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.quantity-control span {
+    margin: 0 10px;
+}
+
+#place-order-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.order-summary {
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+.center-text img{
+    color: white;
+    padding: 15px;
+    border-radius: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}

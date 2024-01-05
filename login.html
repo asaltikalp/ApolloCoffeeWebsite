@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Apollo Coffee</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 300px; margin: auto; }
+        label, input, button { display: block; width: 100%; margin-bottom: 10px; }
+        button { cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+        </form>
+    </div>
+<form action="order.html" method="post">
+        <!-- Form elemanları (inputlar, butonlar vs.) -->
+    <input type="submit" value="Login">
+</form>
+<button id="submit-order">Siparişi Onayla</button>
+
+<script>
+    document.getElementById('submit-order').addEventListener('click', function() {
+        // Sipariş işlemleri burada yapılır...
+
+        // Sipariş tamamlandıktan sonra yönlendirme
+        window.location.href = 'current-orders.html';
+    });
+</script>
+
+</body>
+</html>
