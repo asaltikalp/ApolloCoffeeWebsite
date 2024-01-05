@@ -6,7 +6,7 @@ body {
     background-image: url('src/background.png'); /* Resmin yolu */
     background-size: cover; /* Resmi kaplayacak şekilde ayarlar */
     background-position: center; /* Resmi ortalar */
-    background-repeat: repeat; /* Resmin tekrar etmesini önler */
+    background-repeat: repeat-y; /* Resmin tekrar etmesini önler */
 
 }
 
@@ -18,13 +18,16 @@ body {
 }
 
 .coffee-item {
-    background-color: hsl(44, 100%, 93%);
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: calc(28%);
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    background-color: rgba(244, 192, 150, 0.926);
+    color: rgb(52, 24, 4);
+    border: none;
+    cursor: pointer; 
 }
 
 .coffee-item img {
@@ -41,11 +44,13 @@ body {
 }
 
 .quantity-control button {
-    background-color: hsla(21, 100%, 50%, 0.31);
+    background-color:  rgb(52, 24, 4);;
     color: white;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
+    border-radius: 8px;
+
 }
 
 .quantity-control span {
@@ -53,7 +58,7 @@ body {
 }
 
 #place-order-btn {
-    background-color: #28a745;
+    background-color: hwb(21 7% 59% / 0.934);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -61,7 +66,7 @@ body {
     cursor: pointer;
     margin-top: 20px;
     display: block;
-    width: 200px;
+    width: 400px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -81,4 +86,29 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    float: left;
+}
+
+.navbar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar ul li a:hover {
+    background-color: #ddd;
+    color: black;
 }

@@ -18,8 +18,10 @@ document.getElementById('place-order-btn').addEventListener('click', function() 
 
     coffeeTypes.forEach(function(coffeeType) {
         var quantity = document.getElementById(coffeeType + '-quantity').innerText;
+        var coffeeSize = document.getElementById(coffeeType + '-size') ? document.getElementById(coffeeType + '-size').value : 'default';
+
         if (parseInt(quantity) > 0) {
-            orderSummary += coffeeType.charAt(0).toUpperCase() + coffeeType.slice(1) + ': ' + quantity + '\n';
+            orderSummary += coffeeType.charAt(0).toUpperCase() + coffeeType.slice(1) + ' (' + coffeeSize + '): ' + quantity + '\n';
             isEmptyOrder = false;
         }
     });

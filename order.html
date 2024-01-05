@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="order.css">
 </head>
 <body>
-  
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
         import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
@@ -56,14 +55,33 @@
         }
         
       </script>
-<div style="display: flex; justify-content: center; align-items: center; " class="center-text"> <img src="src/logo.png" width="200" alt="Latte"></div>
+      <nav class="navbar">
+        <ul>
+            <div style="display: flex; align-items: center; " class="center-text"> <img src="src/logo.png" width="200" alt="Latte">
 
-<div class="top-banner" style="display: flex; justify-content: center; align-items: center; padding: 30px;"><img width="400px" src="src/design.png"></div>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+            <!-- Diğer menü öğeleri -->
+        </ul>
+    </nav>
+</div>
+
+<div class="top-banner" style="display: flex; justify-content: center; border-radius: 75px; align-items: center; padding: 30px;">
+    <img src="src/design.png" width="400px">
+    <img src="src/design2.png" width="400px">
+
+</div>
     <div class="coffee-container">
         <div class="coffee-item">
             <img src="src/latte.png" alt="Latte">
             <h3>Latte</h3>
             <h3>$4.50</h3>
+=            <select id="latte-size" required>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
             <div class="quantity-control">
                 <button onclick="changeQuantity('latte', -1)">-</button>
                 <span id="latte-quantity">0</span>
@@ -75,6 +93,11 @@
             <img src="src/espresso.png" alt="Espresso">
             <h3>Espresso</h3>
             <h3>$3.00</h3>
+            <select id="espresso-size" required>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
             <div class="quantity-control">
                 <button onclick="changeQuantity('espresso', -1)">-</button>
                 <span id="espresso-quantity">0</span>
@@ -86,6 +109,11 @@
             <img src="src/americano.png" alt="Americano">
             <h3>Americano</h3>
             <h3>$3.50</h3>
+            <select id="americano-size" required>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
             <div class="quantity-control">
                 <button onclick="changeQuantity('americano', -1)">-</button>
                 <span id="americano-quantity">0</span>
@@ -96,6 +124,11 @@
             <img src="src/cappuccino.png" alt="Cappuccino">
             <h3>Cappuccino</h3>
             <h3>$4.50</h3>
+            <select id="cappuccino-size" required>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
                 <div class="quantity-control">
                 <button onclick="changeQuantity('cappuccino', -1)">-</button>
                 <span id="cappuccino-quantity">0</span>
@@ -106,6 +139,11 @@
             <img src="src/FiltreKahve.png" alt="FilterCoffe">
             <h3>Filter Coffe</h3>
             <h3>$3.00</h3>
+            <select id="filterCoffe-size" required>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
             <div class="quantity-control">
                 <button onclick="changeQuantity('filterCoffe', -1)">-</button>
                 <span id="filterCoffe-quantity">0</span>
@@ -116,6 +154,11 @@
             <img src="src/flatwhite.png" alt="flatwhite">
             <h3>Flat White</h3>
             <h3>$4.50</h3>
+            <select id="flatwhite-size" required>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
             <div class="quantity-control">
                 <button onclick="changeQuantity('flatwhite', -1)">-</button>
                 <span id="flatwhite-quantity">0</span>
@@ -126,6 +169,11 @@
             <img src="src/latte.png" alt="Frappucino">
             <h3>Frappuccino</h3>
             <h3>$3.50</h3>
+            <select id="frappuccin-sizeo" required>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
                 <div class="quantity-control">
                 <button onclick="changeQuantity('frappuccino', -1)">-</button>
                 <span id="frappuccino-quantity">0</span>
@@ -136,6 +184,11 @@
             <img src="src/Macchiato.png" alt="Macchiato">
             <h3>Macchiato</h3>
             <h3>$4.00</h3>
+            <select id="macchiato-size" required>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
             <div class="quantity-control">
                 <button onclick="changeQuantity('macchiato', -1)">-</button>
                 <span id="macchiato-quantity">0</span>
@@ -146,6 +199,11 @@
             <img src="src/mocha.png" alt="mocha">
             <h3>Mocha</h3>
             <h3>$2.50</h3>
+            <select id="mocha-size" required>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
             <div class="quantity-control">
                 <button onclick="changeQuantity('mocha', -1)">-</button>
                 <span id="mocha-quantity">0</span>
@@ -156,6 +214,11 @@
             <img src="src/brownie.png" alt="brownie">
             <h3>Brownie</h3>
             <h3>$2.00</h3>
+            <select id="brownie-size" required>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
             <div class="quantity-control">
                 <button onclick="changeQuantity('brownie', -1)">-</button>
                 <span id="brownie-quantity">0</span>
@@ -166,6 +229,11 @@
             <img src="src/cheesecake.png" alt="cheesecake">
             <h3>Cheesecake</h3>
             <h3>$5.00</h3>
+            <select id="cheesecake-size" required>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
             <div class="quantity-control">
                 <button onclick="changeQuantity('cheesecake', -1)">-</button>
                 <span id="cheesecake-quantity">0</span>
@@ -176,6 +244,11 @@
             <img src="src/cake.png" alt="cake">
             <h3>Cake</h3>
             <h3>$3.50</h3>
+            <select id="cake-size" required>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
             <div class="quantity-control">
                 <button onclick="changeQuantity('cake', -1)">-</button>
                 <span id="cake-quantity">0</span>

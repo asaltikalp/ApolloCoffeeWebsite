@@ -1,39 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login - Apollo Coffee</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        .container { width: 300px; margin: auto; }
-        label, input, button { display: block; width: 100%; margin-bottom: 10px; }
-        button { cursor: pointer; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Screen</title>
+    <link rel="stylesheet" href="login.css">
 </head>
-<body>
-    <div class="container">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" required>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm" method="post">
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <div class="input-group">
+                <input type="radio" id="Staff" name="loginType" value="Staff" >
+                <label for="Staff">Staff</label>
+                <input type="radio" id="Customer" name="loginType" value="Customer" checked>
+                <label for="Customer">Customer</label>
+            </div>
+            <div class="input-group">
+            <button  type="button" id="loginButton">Login</button>
+            </div>
+            <div>
+            <button  type="button" id="signupButton">You don't have an account?</button></div>
         </form>
     </div>
-<form action="order.html" method="post">
-        <!-- Form elemanları (inputlar, butonlar vs.) -->
-    <input type="submit" value="Login">
-</form>
-<button id="submit-order">Siparişi Onayla</button>
-
-<script>
-    document.getElementById('submit-order').addEventListener('click', function() {
-        // Sipariş işlemleri burada yapılır...
-
-        // Sipariş tamamlandıktan sonra yönlendirme
-        window.location.href = 'current-orders.html';
-    });
-</script>
-
+        <script type="module" src="login.js"></script>
 </body>
 </html>

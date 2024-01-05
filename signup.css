@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe6e6;
+    margin: 0;
+    padding: 20px;
+    background-image: url('src/background.png'); /* Resmin yolu */
+    background-size: cover; /* Resmi kaplayacak şekilde ayarlar */
+    background-position: center; /* Resmi ortalar */
+    background-repeat: repeat; /* Resmin tekrar etmesini önler */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signup-container {
+    background-color: rgba(244, 192, 150, 0.926);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    margin: 0 0 15px 0;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input-group input[type="radio"] {
+    margin-right: 10px;
+    display: inline-block; /* Bu, label ve radio butonlarını yan yana getirir */
+
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #555;
+    color: white;
+}
