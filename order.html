@@ -8,15 +8,12 @@
 <body>
   
     <script type="module">
-        // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
         import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
       
-        // Your web app's Firebase configuration
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         const firebaseConfig = {
           apiKey: "AIzaSyDtUnJPFY88Ip58u-KVzCtiRQdQuzSJN5Q",
@@ -28,7 +25,18 @@
           measurementId: "G-T0VYCXFG2Y"
         };
 
-    
+        document.getElementById('place-order-btn').addEventListener('click', function() {
+            var coffeeTypes = ['latte', 'espresso', 'americano', 'cappuccino', 'filterCoffe', 'flatwhite', 'frappuccino', 'macchiato', 'mocha', 'brownie', 'cheesecake', 'cake']; // Buraya diğer kahve türlerini de ekleyebilirsiniz.
+            var orderDetails = { timestamp: new Date() };
+
+            coffeeTypes.forEach(function(coffeeType) {
+                var quantity = parseInt(document.getElementById(coffeeType + '-quantity').innerText) || 0;
+                orderDetails[coffeeType] = quantity;
+            });
+
+            saveOrderToFirebase(orderDetails);
+        });
+
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         var db = getFirestore(app);
